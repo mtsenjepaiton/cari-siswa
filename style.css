@@ -10,6 +10,95 @@ body {
   border-radius: 0 0 20px 20px;
   margin-bottom: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  position: relative;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+}
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Logo */
+@media (min-width: 768px) {
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .logo-container {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .header-content {
+    text-align: left;
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    width: 100px;
+  }
+
+  .header h1 {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+
+  .header .lead {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 80px;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .header .lead {
+    font-size: 0.85rem;
+  }
+}
+
+/* Hover effect untuk logo */
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card {
