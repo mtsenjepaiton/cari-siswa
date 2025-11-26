@@ -1,0 +1,237 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: white;
+  padding: 2rem 0;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border: none;
+  transition: transform 0.3s;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.search-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.result-box {
+  display: none;
+}
+
+.attendance-chart {
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.chart-bar {
+  width: 40px;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+
+.chart-label {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.percentage-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.btn-search {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-search:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  background-color: #343a40;
+  color: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.info-box {
+  background: linear-gradient(135deg, #2ecc71, #3498db);
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.month-card {
+  border-left: 5px solid #3498db;
+}
+
+.month-card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  font-weight: bold;
+}
+
+.badge-month {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  font-size: 0.9rem;
+}
+
+.month-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.month-btn {
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.month-btn:hover {
+  background-color: #dee2e6;
+}
+
+.month-btn.active {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: white;
+}
+
+.loading-spinner {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+
+.total-stats {
+  background: linear-gradient(135deg, #f39c12, #e74c3c);
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.progress {
+  border-radius: 10px;
+}
+
+.table-borderless th {
+  font-weight: 600;
+  color: #495057;
+}
+
+.table-borderless td {
+  color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 0;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-box {
+    padding: 1.5rem;
+  }
+
+  .month-selector {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .month-btn {
+    white-space: nowrap;
+  }
+
+  .attendance-chart {
+    height: 100px;
+  }
+
+  .chart-bar {
+    width: 30px;
+  }
+
+  .percentage-display {
+    font-size: 2rem;
+  }
+}
+
+/* Animation for smooth transitions */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
