@@ -99,9 +99,9 @@ async function searchStudent(studentId) {
         student.monthlyData.push({
           month: record[5],
           present: parseInt(record[6]) || 0,
-          absent: parseInt(record[7]) || 0,
+          absent: parseInt(record[9]) || 0,
           permission: parseInt(record[8]) || 0,
-          sick: parseInt(record[9]) || 0,
+          sick: parseInt(record[7]) || 0,
         });
       });
     } else {
