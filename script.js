@@ -99,9 +99,9 @@ async function searchStudent(studentId) {
         student.monthlyData.push({
           month: record[5],
           present: parseInt(record[6]) || 0,
-          absent: parseInt(record[7]) || 0,
+          absent: parseInt(record[9]) || 0,
           permission: parseInt(record[8]) || 0,
-          sick: parseInt(record[9]) || 0,
+          sick: parseInt(record[7]) || 0,
         });
       });
     } else {
@@ -223,11 +223,11 @@ function displayMonthlyData(monthlyData, activeMonthIndex = 0) {
                         <table class="table table-borderless">
                             <tr>
                                 <th width="60%">Kehadiran:</th>
-                                <td>${monthData.present} hari</td>
+                                <td>${monthData.present} jam</td>
                             </tr>
                             <tr>
                                 <th>Alpa:</th>
-                                <td>${monthData.absent} hari</td>
+                                <td>${monthData.absent} jam</td>
                             </tr>
                         </table>
                     </div>
@@ -235,11 +235,11 @@ function displayMonthlyData(monthlyData, activeMonthIndex = 0) {
                         <table class="table table-borderless">
                             <tr>
                                 <th width="60%">Izin:</th>
-                                <td>${monthData.permission} hari</td>
+                                <td>${monthData.permission} jam</td>
                             </tr>
                             <tr>
                                 <th>Sakit:</th>
-                                <td>${monthData.sick} hari</td>
+                                <td>${monthData.sick} jam</td>
                             </tr>
                         </table>
                     </div>
